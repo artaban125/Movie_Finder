@@ -108,6 +108,18 @@ npm run build
 
 빌드 결과는 `frontend/dist`에 생성됩니다.
 
+## 배포 (Render)
+
+백엔드 서비스의 **Root Directory**는 `backend`로 설정합니다.
+
+- Build Command: `pip install -r requirements.txt`
+- Start Command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
+- Python 버전: `backend/.python-version`에 `3.13`으로 고정되어 있습니다.  
+  (`sqlmodel==0.0.22`는 Python 3.14와 호환되지 않습니다.)
+
+필요하면 Dashboard Environment에 `PYTHON_VERSION=3.13.5`를 추가로 지정할 수 있습니다.  
+환경 변수 `MOVIE_API_KEY`, `KOBIS_API_BASE_URL`도 Render에 설정해야 합니다.
+
 ## 관련 문서
 
 - [제품 요구사항](docs/PRD.md)
