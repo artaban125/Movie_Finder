@@ -1,0 +1,10 @@
+.env
+backend/.env
+backend/app.db
+backend/static/posters/*
+!backend/static/posters/.gitkeep
+**/__pycache__/
+backend/.venv/
+frontend/node_modules/
+frontend/dist/
+.DS_Store
