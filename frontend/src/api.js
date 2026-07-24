@@ -2,7 +2,8 @@
 // 백엔드(FastAPI) 호출 함수 모음
 // 화면은 여기 함수만 부른다. 주소가 바뀌면 BASE_URL 한 줄만 수정.
 // ---------------------------------------------------------------
-const BASE_URL = 'http://127.0.0.1:8000'
+// const BASE_URL = 'http://127.0.0.1:8000'
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000'
 
 export function resolveMediaUrl(path) {
   if (!path) return ''
